@@ -52,6 +52,14 @@ export default function MainLayout({ children }: { children: ReactNode }) {
             </label>
           </div>
         </div>
+        {/* Mobile nav */}
+        <nav className="md:hidden">
+          <div className="no-scrollbar mx-auto flex max-w-7xl items-center gap-4 overflow-x-auto px-4 py-2 text-sm">
+            {nav.map((n) => (
+              <NavLink key={n.to} to={n.to} className={({isActive})=>cn("rounded-xl px-3 py-1.5 text-white/80", isActive && "bg-white text-black")}>{n.label}</NavLink>
+            ))}
+          </div>
+        </nav>
       </header>
       <main className="mx-auto max-w-7xl px-4 py-6">{children}</main>
       <footer className="border-t border-white/10 py-6 text-center text-xs text-white/50">© {new Date().getFullYear()} TalentScout</footer>
