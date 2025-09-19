@@ -37,12 +37,12 @@ export default function Index() {
   return (
     <div className="space-y-6">
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-        <section className="rounded-2xl bg-[#0E0E0E] p-5">
+        <section className="ts-card p-5 hover-glow">
           <h2 className="mb-3 text-sm font-semibold text-white/70">Hero Scorecard</h2>
           <ScoreGauge score={78} trend={6} />
         </section>
 
-        <section className="rounded-2xl bg-[#0E0E0E] p-5">
+        <section className="ts-card p-5 hover-glow">
           <h2 className="mb-4 text-sm font-semibold text-white/70">Current Score & Progress</h2>
           {lowBandwidth ? (
             <div className="space-y-1 text-white/80">
@@ -63,7 +63,7 @@ export default function Index() {
           )}
         </section>
 
-        <section className="rounded-2xl bg-[#0E0E0E] p-5">
+        <section className="ts-card p-5 hover-glow">
           <h2 className="mb-4 text-sm font-semibold text-white/70">Weekly Challenge</h2>
           <div className="flex items-center justify-between">
             <div>
@@ -74,7 +74,7 @@ export default function Index() {
           </div>
         </section>
 
-        <section className="rounded-2xl bg-[#0E0E0E] p-5 md:col-span-2 lg:col-span-1">
+        <section className="ts-card p-5 md:col-span-2 lg:col-span-1 hover-glow">
           <h2 className="mb-4 text-sm font-semibold text-white/70">Leaderboard Snapshot</h2>
           {lowBandwidth ? (
             <table className="w-full text-left text-sm">
@@ -102,7 +102,7 @@ export default function Index() {
           )}
         </section>
 
-        <section className="rounded-2xl bg-white p-5 text-black">
+        <section className="ts-white-card p-5 hover-glow">
           <div className="mb-4 flex items-center justify-between">
             <h2 className="text-sm font-semibold">Notifications</h2>
             <span className="text-xs text-black/60">Priority Sorted</span>
@@ -126,7 +126,7 @@ export default function Index() {
           </ul>
         </section>
 
-        <section className="rounded-2xl bg-white p-5 text-black">
+        <section className="ts-white-card p-5 hover-glow">
           <h2 className="mb-4 text-sm font-semibold">Micro-drills</h2>
           <div className="grid grid-cols-3 gap-3">
             {[{icon:PlayCircle,label:"Sprint"},{icon:Bolt,label:"Agility"},{icon:Flame,label:"Endurance"},{icon:Shield,label:"Balance"},{icon:Star,label:"Technique"},{icon:Zap,label:"Power"}].map((d) => (
