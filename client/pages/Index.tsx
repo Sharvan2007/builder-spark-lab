@@ -37,7 +37,7 @@ export default function Index() {
   return (
     <div className="space-y-6">
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-        <section className="rounded-2xl bg-[#0E0E0E] p-5 lg:col-span-1">
+        <section className="rounded-2xl bg-[#0E0E0E] p-5">
           <h2 className="mb-3 text-sm font-semibold text-white/70">Hero Scorecard</h2>
           <ScoreGauge score={78} trend={6} />
         </section>
@@ -101,9 +101,7 @@ export default function Index() {
             </ul>
           )}
         </section>
-      </div>
 
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
         <section className="rounded-2xl bg-white p-5 text-black">
           <div className="mb-4 flex items-center justify-between">
             <h2 className="text-sm font-semibold">Notifications</h2>
